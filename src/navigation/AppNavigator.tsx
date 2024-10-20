@@ -4,8 +4,9 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import TabNavigator from './TabNavigator'; // Import TabNavigator
 import DetailExample from '../screens/Detail/DetailExample';
 import DrawerNavigator from './DrawerNavigator';
-import StartScreen from '../screens/StartScreen';
-import DetailExample2 from '../screens/Detail/DetailExample2';
+import StartScreen from '../screens/TabScreen/StartScreen';
+import Home from '../exam';
+import Order from '../screens/Detail/Order';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,8 +20,9 @@ const AppNavigator = () => {
           component={DrawerNavigator}
           options={{headerShown: false}}
         />
+        <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="DetailExample" component={DetailExample} />
-        <Stack.Screen name="DetailExample2" component={DetailExample2} />
+        <Stack.Screen name="Order" component={Order} />
       </Stack.Navigator>
     </NavigationContainer>
   );
